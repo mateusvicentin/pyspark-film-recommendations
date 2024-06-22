@@ -68,7 +68,7 @@ ratings.show()
 </p>
 
 <h3>Treinando os Dados</h3>
-<h4>Nesta seção, os dados serão divididos em duas partes: dados para treino e dados para teste. Serão utilizados 80% dos dados para treinamento e 20% para testes. Para isso, foram criadas duas dependências chamadas <code>training</code> e <code>test</code>. A coluna <code>rating</code> será utilizada para o treino.</h4>
+<h4>Nesta seção, os dados serão divididos em duas partes: dados para treino e dados para teste. Serão utilizados 80% dos dados para treinamento e 20% para testes. Para isso, foram criadas duas dependências chamadas <code>training</code> e <code>test</code>. A coluna <code>rating</code> será utilizada para esse tipo de teste.</h4>
 
 ```python
 (training, test) = ratings.randomSplit([0.8, 0.2])
