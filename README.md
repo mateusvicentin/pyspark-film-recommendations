@@ -94,10 +94,18 @@ print("Root-mean-square error = " + str(rmse))
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/0a1a6566-15d3-4011-beb9-8b6e7b962add" alt="img6">
 </p>
+<h4>Mostrando apenas um dos ID para Analise</h4>
 
 ```python
 userRecs = model.recommendForAllUsers(10)
-userRecs.show(10, truncate=False)
+userRecs.show(1, truncate=False)
 ```
 
+<h2>Salvando os dados no MongoDB</h2>
 
+```python
+userRecs.select(userRecs["userId"], \
+                userRecs["recommendations"]["movieId"].alias("movieId"),\
+userRecs["recommendations"]["rating"].cast('array<double>').alias("rating")).\
+    write.format("mongodb").mode("append").save()
+```
