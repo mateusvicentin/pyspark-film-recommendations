@@ -11,4 +11,6 @@
 </p>
 
 <h2>Iniciando com o PySpark</h2>
-<p2></p2>
+<p>Acessando o serviço do Spark através do link <a href="http://localhost:8888/">http://localhost:8888/</a>, foi criado um novo Notebook para a inicialização do projeto.</p>
+
+
