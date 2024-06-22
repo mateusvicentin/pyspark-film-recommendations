@@ -189,10 +189,10 @@ if __name__ == "__main__":
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/6d47f447-1fdb-4722-907f-7e8f481e637d" alt="img13">
 </p>
 <h3>Retorno da consulta</h3>
+<h4>No caso, são retornados os IDs dos filmes recomendados ao usuário e a nota prevista que ele irá avaliar para aquele filme.</h4>
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/1a29f1cc-b5be-41ca-b30a-51ebf8fd5f3f" alt="img14">
 </p>
-<p>No caso, são retornados os IDs dos filmes recomendados ao usuário e a nota prevista que ele irá avaliar para aquele filme.</p>
 <h2>Consultando mais de um usuário e retornando apenas o ID do filme recomendado</h2>
 
 ```python
