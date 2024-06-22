@@ -181,7 +181,7 @@ if __name__ == "__main__":
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/913a2123-8e9a-4c37-90ee-71dcbda7febc" alt="img11">
 </p>
-<h4>Vamos realizar a consulta pelo ID do usuário. Neste caso, irei passar o mesmo ID que foi utilizado no código <code>mongo.py</code>.</h4>
+<h4>Vamos realizar a consulta pelo ID do usuário. Neste caso, irei passar o ID 20.</h4>
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/1a0f430b-c4e7-43c3-92c6-e70661b98809" alt="img12">
 </p>
