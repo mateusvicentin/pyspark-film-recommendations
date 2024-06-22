@@ -47,7 +47,7 @@ spark = SparkSession\
 ```
 
 <h3>Lendo o Arquivo que Contém os Dados</h3>
-<h4>O arquivo TXT que será lido é o <code>sample_movielens_ratings.txt</code>. Lembrando que as informações estão dispostas em linhas, sendo necessário transformar esses dados em colunas.</h4>
+<h4>O arquivo TXT que será lido é o <code>sample_movielens_ratings.txt</code>. Lembrando que as informações estão dispostas em linhas, sendo necessário transformar esses dados em colunas. </h4>
 
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/af941a82-cddc-4ab7-8e93-fbebf40b739b" alt="img4">
