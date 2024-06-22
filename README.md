@@ -193,6 +193,7 @@ if __name__ == "__main__":
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/1a29f1cc-b5be-41ca-b30a-51ebf8fd5f3f" alt="img14">
 </p>
 
+<h2>Consultando mais de um usuário e retornando apenas o ID do filme recomendado</h2>
 
 
 
