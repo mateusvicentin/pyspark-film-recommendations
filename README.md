@@ -115,5 +115,12 @@ userRecs["recommendations"]["rating"].cast('array<double>').alias("rating")).\
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/49e21230-a37a-42bf-92e6-dea8f3e9189a" alt="img7">
 </p>
 
+<h2>Verificando um dos Arquivos no MongoDB</h2>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/edd45f7a-9f19-4e1e-ad21-2f8784304f34" alt="img8">
+</p>
+
+
+
 
 
