@@ -28,6 +28,17 @@ from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.recommendation import ALS
 from pyspark.sql import Row
 ```
+<h3>Iniciando a Seção do Spark </h3>
+<h4>Nessa parte iremos configuração a conexão com o MongoDB, vamos criar um Database chamado <code>Filmes</code> e uma Collection chamada <code>Recomendações</code></h4>
 
+```python
+spark = SparkSession\
+        .builder\
+        .appName("ProjetoRecomendações")\
+        .config("spark.mongodb.read.connection.uri", "mongodb://172.17.0.2:27018/filmes.recomendacoes") \
+        .config("spark.mongodb.write.connection.uri", "mongodb://172.17.0.2:27018/filmes.recomendacoes") \
+        .config('spark.jars.packages',"org.mongodb.spark:mongo-spark-connector_2.12:10.3.0")\
+        .getOrCreate()
+```
 
 
