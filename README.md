@@ -123,5 +123,6 @@ userRecs["recommendations"]["rating"].cast('array<double>').alias("rating")).\
 <h2>Utilizando o FastAPI</h2>
 <h4>Vamos utilizar 2 scripts em Python, um chamado <code>mongo</code> e outro chamado <code>main</code>, além do arquivo <code>requirements.txt</code> que contém as bibliotecas usadas no Python.</h4>
 
-
+<h3>mongo</h3>
+<h4>O mongo vamos realizar a conexão com o banco de dados do mongodb, passando o nome do banco que no caso é <code>filmes</code> e a collection que é <code>recomendacoes</code></h4>
 
