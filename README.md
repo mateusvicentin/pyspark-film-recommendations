@@ -120,6 +120,7 @@ userRecs["recommendations"]["rating"].cast('array<double>').alias("rating")).\
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/edd45f7a-9f19-4e1e-ad21-2f8784304f34" alt="img8">
 </p>
 
+<h2>Utilizando o FastAPI</h2>
 
 
 
