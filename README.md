@@ -225,9 +225,7 @@ def consulta_rec(usuarios: str) -> Dict[str, Dict[int, list]]:
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/fe3269bf-144d-4dce-84a3-520dfc6a8924" alt="img18">
 </p>
-
-
-
+<h4>Nesse método, será retornado apenas o ID do usuário e os filmes que serão recomendados a ele.</h4>
 
 
 
