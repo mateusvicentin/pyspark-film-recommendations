@@ -213,9 +213,20 @@ def consulta_rec(usuarios: str) -> Dict[str, Dict[int, list]]:
 </p>
 <h4>Vou utilizar o <code>/rec/v3/{usuarios}</code> que foi o que criei para esse tipo de consulta.</h4>
 
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/f4ffe2aa-ea7b-4327-babf-e7bc5cfc9287" alt="img16">
+</p>
+
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/d63088d2-f7e4-4dc6-96b0-6e91e02dd060" alt="img17">
+</p>
+
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/fe3269bf-144d-4dce-84a3-520dfc6a8924" alt="img18">
+</p>
 
 
 
-![image](https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/f4ffe2aa-ea7b-4327-babf-e7bc5cfc9287)
+
 
 
