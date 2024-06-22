@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/13510ab8-9a3f-4cad-b85c-fde8d48927c7" alt="img">
+</p>
+
 <h1 align="center">Sistema de Recomendação de Filmes utilizando Docker, PySpark, MongoDB e FastAPI</h1>
 
 <p>
