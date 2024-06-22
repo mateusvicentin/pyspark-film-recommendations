@@ -125,6 +125,7 @@ userRecs["recommendations"]["rating"].cast('array<double>').alias("rating")).\
 
 <h3>mongo.py</h3>
 <h4>O mongo vamos realizar a conexão com o banco de dados do mongodb, passando o nome do banco que no caso é <code>filmes</code> e a collection que é <code>recomendacoes</code></h4>
+<h4>Vou chamar a função <code>inicia_conexão()</code> e passar um usuário para pesquisa para verificar se a comunicação está funcionando.</h4>
 
 ```python
 from pymongo import MongoClient
@@ -144,4 +145,38 @@ def consulta_recomendacoes(usuario, conexao):
         list_rec.append((rec['movieId'],rec['rating']))
 
     return {'Recomendações': list_rec}
+
+conn = inicia_conexao()
+res = list(conn.find({"userId": 21 }))
+print(res)
 ```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/0c5e85d8-1cd6-4625-b168-59bfe9671912" alt="img9">
+</p>
+
+<h3>main.py</h3>
+<h4>É responsável por conectar com o FastAPI e fazer as consultas. Irei criar uma função GET para realizar a mesma consulta pelo ID, porém dessa vez através da interface web.</h4>
+<h4>Vamos iniciar o servidor executando o código e acessar pelo link <a href="http://localhost:8001/docs/">http://localhost:8001/docs/</a>.</h4>
+
+```python
+from fastapi import FastAPI
+from typing import Dict
+import uvicorn
+from bd import mongo
+
+app = FastAPI()
+conexao = mongo.inicia_conexao()
+
+@app.get("/rec/v2/{usuario}")
+def consulta_rec(usuario: int):
+    return {"usuario": usuario, "resultado_recs": mongo.consulta_recomendacoes(usuario, conexao)}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host='localhost', port=8001)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/c2a332b0-14e9-4857-b984-28d7c88c36cc" alt="img10">
+</p>
+
+
+
