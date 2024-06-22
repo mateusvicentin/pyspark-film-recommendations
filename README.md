@@ -194,6 +194,18 @@ if __name__ == "__main__":
 </p>
 
 <h2>Consultando mais de um usuário e retornando apenas o ID do filme recomendado</h2>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/1a29f1cc-b5be-41ca-b30a-51ebf8fd5f3f" alt="img14">
+</p>
 
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/945fa9c2-83a7-4fa6-bbdb-f614bddc8aae" alt="img15">
+</p>
+<h4>Vou utilizar o <code>/rec/v3/{usuarios}</code> que foi o que criei para esse tipo de consulta.</h4>
+
+
+
+
+![image](https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/f4ffe2aa-ea7b-4327-babf-e7bc5cfc9287)
 
 
