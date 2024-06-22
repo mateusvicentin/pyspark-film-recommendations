@@ -59,11 +59,11 @@ ratingsRDD = parts.map(lambda p: Row(userId=int(p[0]), movieId=int(p[1]),
 ratings = spark.createDataFrame(ratingsRDD.collect())
 ratings.show()
 ```
+<h4>Foram criadas quatro colunas, nomeadas como <code>userId</code>, <code>movieId</code>, <code>rating</code> e <code>timestamp</code>.</h4>
 
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/6caac443-ed83-4124-be8d-f3730b50f01d" alt="img5">
 </p>
-<h4>Foram criadas quatro colunas, nomeadas como <code>userId</code>, <code>movieId</code>, <code>rating</code> e <code>timestamp</code>.</h4>
 
 
 
