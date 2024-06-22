@@ -109,3 +109,11 @@ userRecs.select(userRecs["userId"], \
 userRecs["recommendations"]["rating"].cast('array<double>').alias("rating")).\
     write.format("mongodb").mode("append").save()
 ```
+<h4>Os dados gerados no MongoDB são o userId, uma lista com 10 filmes recomendados (movieId) e a lista de notas para esses 10 filmes.</h4>
+
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/49e21230-a37a-42bf-92e6-dea8f3e9189a" alt="img7">
+</p>
+
+
+
