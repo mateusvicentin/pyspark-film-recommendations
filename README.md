@@ -11,6 +11,8 @@
 *  * [Salvando os dados no MongoDB](#Salvando-os-dados-no-MongoDB)
 *  * [Verificando-um-dos-Arquivos-no-MongoDB](#Verificando-um-dos-Arquivos-no-MongoDB)
 * [FastAPI](#FastAPI)
+*  * [Utilizando o FastAPI](#Utilizando-o-FastAPI)
+*  * [Consultando mais de um usuário e retornando apenas o ID do filme recomendado](#Consultando-mais-de-um-usuário-e-retornando-apenas-o-ID-do-filme-recomendado)
 
 
 
