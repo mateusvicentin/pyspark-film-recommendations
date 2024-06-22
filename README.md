@@ -192,7 +192,7 @@ if __name__ == "__main__":
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/1a29f1cc-b5be-41ca-b30a-51ebf8fd5f3f" alt="img14">
 </p>
-
+<p>No caso, são retornados os IDs dos filmes recomendados ao usuário e a nota prevista que ele irá avaliar para aquele filme.</p>
 <h2>Consultando mais de um usuário e retornando apenas o ID do filme recomendado</h2>
 
 ```python
