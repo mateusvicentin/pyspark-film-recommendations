@@ -180,6 +180,7 @@ if __name__ == "__main__":
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/c2a332b0-14e9-4857-b984-28d7c88c36cc" alt="img10">
 </p>
 <h3>Apos acessar</h3>
+<h4>São informados os requests criados. No caso, tenho apenas um que irá retornar o usuário, além dos arrays de filmes recomendados e notas.</h4>
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/913a2123-8e9a-4c37-90ee-71dcbda7febc" alt="img11">
 </p>
