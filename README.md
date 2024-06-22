@@ -90,6 +90,14 @@ print("Root-mean-square error = " + str(rmse))
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/c80ed7eb-892d-41ca-840c-ce2834d5421a" alt="img5">
 </p>
 
+<h3>Mostrando o userId, os filmes recomendados e a previsão da nota</h3>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/0a1a6566-15d3-4011-beb9-8b6e7b962add" alt="img6">
+</p>
 
+```python
+userRecs = model.recommendForAllUsers(10)
+userRecs.show(10, truncate=False)
+```
 
 
