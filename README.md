@@ -102,6 +102,7 @@ userRecs.show(1, truncate=False)
 ```
 
 <h2>Salvando os dados no MongoDB</h2>
+<h4>Vamos salvar o userID e dois arrays de filmes e notas.</h4>
 
 ```python
 userRecs.select(userRecs["userId"], \
