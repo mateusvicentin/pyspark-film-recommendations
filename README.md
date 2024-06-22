@@ -10,6 +10,8 @@
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/947d111e-d697-4981-9850-4e1964266133" alt="img1">
 </p>
 
+<h1>PySpark</h1>
+
 <h2>Iniciando com o PySpark</h2>
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/5f9225fb-abb3-46cc-9d48-4129a7bd8961" alt="img2">
@@ -65,6 +67,28 @@ ratings.show()
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/6caac443-ed83-4124-be8d-f3730b50f01d" alt="img5">
 </p>
 
+<h3>Treinando os Dados</h3>
+<h4>Nesta seção, os dados serão divididos em duas partes: dados para treino e dados para teste. Serão utilizados 80% dos dados para treinamento e 20% para testes. Para isso, foram criadas duas dependências chamadas <code>training</code> e <code>test</code>. A coluna <code>rating</code> será utilizada para o treino.</h4>
+
+```python
+(training, test) = ratings.randomSplit([0.8, 0.2])
+als = ALS(maxIter=5, regParam=0.01, userCol="userId", itemCol="movieId", ratingCol="rating",
+              coldStartStrategy="drop")
+model = als.fit(training)
+```
+<h4>Vou calcular a margem de erro da nota para verificar como o modelo identificará o valor da nota a ser considerado.</h4>
+
+```python
+predictions = model.transform(test)
+evaluator = RegressionEvaluator(metricName="rmse", labelCol="rating",
+                                    predictionCol="prediction")
+rmse = evaluator.evaluate(predictions)
+print("Root-mean-square error = " + str(rmse))
+```
+<h4>Nesse caso, a margem de erro da nota prevista que o usuário atribuiria ao filme recomendado é de 1.5.</h4>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/c80ed7eb-892d-41ca-840c-ce2834d5421a" alt="img5">
+</p>
 
 
 
