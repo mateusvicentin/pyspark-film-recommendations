@@ -123,6 +123,25 @@ userRecs["recommendations"]["rating"].cast('array<double>').alias("rating")).\
 <h2>Utilizando o FastAPI</h2>
 <h4>Vamos utilizar 2 scripts em Python, um chamado <code>mongo</code> e outro chamado <code>main</code>, além do arquivo <code>requirements.txt</code> que contém as bibliotecas usadas no Python.</h4>
 
-<h3>mongo</h3>
+<h3>mongo.py</h3>
 <h4>O mongo vamos realizar a conexão com o banco de dados do mongodb, passando o nome do banco que no caso é <code>filmes</code> e a collection que é <code>recomendacoes</code></h4>
 
+```python
+from pymongo import MongoClient
+
+def inicia_conexao():
+
+    client = MongoClient('localhost', 27018)
+    db = client['filmes']
+    col = db['recomendacoes']
+    return col
+
+def consulta_recomendacoes(usuario, conexao):
+
+    recomendacoes = list(conexao.find({"userId": usuario}))
+    list_rec = []
+    for rec in recomendacoes:
+        list_rec.append((rec['movieId'],rec['rating']))
+
+    return {'Recomendações': list_rec}
+```
