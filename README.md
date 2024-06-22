@@ -6,8 +6,8 @@
 
 # Índice 
 * [PySpark](#PySpark)
-* * [Iniciando com o PySpark](#Iniciando-com-o-PySpark)
-* * [Salvando os dados no MongoDB](#Salvando-os-dados-no-MongoDB)
+*  [Iniciando com o PySpark](#Iniciando-com-o-PySpark)
+*  [Salvando os dados no MongoDB](#Salvando-os-dados-no-MongoDB)
 * [MongoDB](#MongoDB)
 * [FastAPI](#FastAPI)
 
