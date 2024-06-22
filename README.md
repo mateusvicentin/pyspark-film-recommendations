@@ -177,6 +177,22 @@ if __name__ == "__main__":
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/c2a332b0-14e9-4857-b984-28d7c88c36cc" alt="img10">
 </p>
+<h3>Apos acessar</h3>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/913a2123-8e9a-4c37-90ee-71dcbda7febc" alt="img11">
+</p>
+<h4>Vamos realizar a consulta pelo ID do usuário. Neste caso, irei passar o mesmo ID que foi utilizado no código <code>mongo.py</code>.</h4>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/1a0f430b-c4e7-43c3-92c6-e70661b98809" alt="img12">
+</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/6d47f447-1fdb-4722-907f-7e8f481e637d" alt="img13">
+</p>
+<h3>Retorno da consulta</h3>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/1a29f1cc-b5be-41ca-b30a-51ebf8fd5f3f" alt="img14">
+</p>
+
 
 
 
