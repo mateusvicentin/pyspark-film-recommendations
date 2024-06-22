@@ -12,7 +12,7 @@
 
 <h1 align="center">PySpark</h1>
 
-<h2>Iniciando com o PySpark</h2>
+<h2>Iniciando com o PySpark:</h2>
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/5f9225fb-abb3-46cc-9d48-4129a7bd8961" alt="img2">
 </p>
@@ -101,7 +101,7 @@ userRecs = model.recommendForAllUsers(10)
 userRecs.show(1, truncate=False)
 ```
 <h1 align="center">MongoDB</h1>
-<h2>Salvando os dados no MongoDB</h2>
+<h2>Salvando os dados no MongoDB:</h2>
 <h4>Vamos salvar o userID e dois arrays de filmes e notas.</h4>
 
 ```python
@@ -116,13 +116,13 @@ userRecs["recommendations"]["rating"].cast('array<double>').alias("rating")).\
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/49e21230-a37a-42bf-92e6-dea8f3e9189a" alt="img7">
 </p>
 
-<h2>Verificando um dos Arquivos no MongoDB</h2>
+<h2>Verificando um dos Arquivos no MongoDB:</h2>
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/edd45f7a-9f19-4e1e-ad21-2f8784304f34" alt="img8">
 </p>
 
 <h1 align="center">FastAPI</h1>
-<h2>Utilizando o FastAPI</h2>
+<h2>Utilizando o FastAPI:</h2>
 <h4>Vamos utilizar 2 scripts em Python, um chamado <code>mongo</code> e outro chamado <code>main</code>, além do arquivo <code>requirements.txt</code> que contém as bibliotecas usadas no Python.</h4>
 
 <h3>mongo.py</h3>
@@ -196,7 +196,7 @@ if __name__ == "__main__":
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/1a29f1cc-b5be-41ca-b30a-51ebf8fd5f3f" alt="img14">
 </p>
-<h2>Consultando mais de um usuário e retornando apenas o ID do filme recomendado</h2>
+<h2>Consultando mais de um usuário e retornando apenas o ID do filme recomendado:</h2>
 
 ```python
 @app.get("/rec/v3/{usuarios}")
