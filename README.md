@@ -194,9 +194,19 @@ if __name__ == "__main__":
 </p>
 
 <h2>Consultando mais de um usuário e retornando apenas o ID do filme recomendado</h2>
-<p align="center">
-  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/1a29f1cc-b5be-41ca-b30a-51ebf8fd5f3f" alt="img14">
-</p>
+
+```python
+@app.get("/rec/v3/{usuarios}")
+def consulta_rec(usuarios: str) -> Dict[str, Dict[int, list]]:
+    usuarios_list = [int(usuario) for usuario in usuarios.split(",")]
+    resultados = {}
+    for usuario in usuarios_list:
+        recomendacoes = list(conexao.find({"userId": usuario}))
+        list_rec = [rec['movieId'] for rec in recomendacoes]
+        resultados[f"Recomendações para o usuário {usuario}"] = list_rec
+
+    return resultados
+```
 
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/945fa9c2-83a7-4fa6-bbdb-f614bddc8aae" alt="img15">
