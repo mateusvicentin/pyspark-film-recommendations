@@ -31,8 +31,8 @@ from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.recommendation import ALS
 from pyspark.sql import Row
 ```
-<h3>Iniciando a Seção do Spark </h3>
-<h4>Nessa parte iremos configuração a conexão com o MongoDB, vamos criar um Database chamado <code>Filmes</code> e uma Collection chamada <code>Recomendações</code></h4>
+<h3>Inicializando a Sessão do Spark</h3>
+<h4>Nesta seção, configuraremos a conexão com o MongoDB. Vamos criar um banco de dados chamado <code>Filmes</code> e uma coleção chamada <code>Recomendações</code>.</h4>
 
 ```python
 spark = SparkSession\
@@ -43,5 +43,29 @@ spark = SparkSession\
         .config('spark.jars.packages',"org.mongodb.spark:mongo-spark-connector_2.12:10.3.0")\
         .getOrCreate()
 ```
+
+<h3>Lendo o Arquivo que Contém os Dados</h3>
+<h4>O arquivo TXT que será lido é o <code>sample_movielens_ratings.txt</code>. Lembrando que as informações estão dispostas em linhas, sendo necessário transformar esses dados em colunas.</h4>
+
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/af941a82-cddc-4ab7-8e93-fbebf40b739b" alt="img4">
+</p>
+
+```python
+lines = spark.read.text("sample_movielens_ratings.txt").rdd
+parts = lines.map(lambda row: row.value.split("::"))
+ratingsRDD = parts.map(lambda p: Row(userId=int(p[0]), movieId=int(p[1]),
+                                     rating=float(p[2]), timestamp=long(p[3])))
+ratings = spark.createDataFrame(ratingsRDD.collect())
+ratings.show()
+```
+
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/6caac443-ed83-4124-be8d-f3730b50f01d" alt="img5">
+</p>
+<h4>Foram criadas quatro colunas, nomeadas como <code>userId</code>, <code>movieId</code>, <code>rating</code> e <code>timestamp</code>.</h4>
+
+
+
 
 
