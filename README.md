@@ -85,7 +85,7 @@ evaluator = RegressionEvaluator(metricName="rmse", labelCol="rating",
 rmse = evaluator.evaluate(predictions)
 print("Root-mean-square error = " + str(rmse))
 ```
-<h4>Nesse caso, a margem de erro da nota prevista que o usuário atribuiria ao filme recomendado é de 1.5.</h4>
+<h4>Nesse caso, a margem de erro da nota prevista que o usuário atribuiria ao filme que será recomendado é de 1.5.</h4>
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/c80ed7eb-892d-41ca-840c-ce2834d5421a" alt="img5">
 </p>
