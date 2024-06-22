@@ -33,7 +33,7 @@ from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.recommendation import ALS
 from pyspark.sql import Row
 ```
-<h3>Inicializando a Sessão do Spark</h3>
+<h3>Inicializando a Sessão do Spark:</h3>
 <h4>Nesta seção, configuraremos a conexão com o MongoDB. Vamos criar um banco de dados chamado <code>Filmes</code> e uma coleção chamada <code>Recomendações</code>.</h4>
 
 ```python
@@ -46,7 +46,7 @@ spark = SparkSession\
         .getOrCreate()
 ```
 
-<h3>Lendo o Arquivo que Contém os Dados</h3>
+<h3>Lendo o Arquivo que Contém os Dados:</h3>
 <h4>O arquivo TXT que será lido é o <code>sample_movielens_ratings.txt</code>. Lembrando que as informações estão dispostas em linhas, sendo necessário transformar esses dados em colunas. </h4>
 
 <p align="center">
@@ -67,7 +67,7 @@ ratings.show()
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/6caac443-ed83-4124-be8d-f3730b50f01d" alt="img5">
 </p>
 
-<h3>Treinando os Dados</h3>
+<h3>Treinando os Dados:</h3>
 <h4>Nesta seção, os dados serão divididos em duas partes: dados para treino e dados para teste. Serão utilizados 80% dos dados para treinamento e 20% para testes. Para isso, foram criadas duas dependências chamadas <code>training</code> e <code>test</code>. A coluna <code>rating</code> será utilizada para esse tipo de teste.</h4>
 
 ```python
@@ -90,7 +90,7 @@ print("Root-mean-square error = " + str(rmse))
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/c80ed7eb-892d-41ca-840c-ce2834d5421a" alt="img5">
 </p>
 
-<h3>Mostrando o userId, os filmes recomendados e a previsão da nota</h3>
+<h3>Mostrando o userId, os filmes recomendados e a previsão da nota:</h3>
 <h4>Mostrando apenas um dos ID para Analise</h4>
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/0a1a6566-15d3-4011-beb9-8b6e7b962add" alt="img6">
@@ -125,7 +125,7 @@ userRecs["recommendations"]["rating"].cast('array<double>').alias("rating")).\
 <h2>Utilizando o FastAPI:</h2>
 <h4>Vamos utilizar 2 scripts em Python, um chamado <code>mongo</code> e outro chamado <code>main</code>, além do arquivo <code>requirements.txt</code> que contém as bibliotecas usadas no Python.</h4>
 
-<h3>mongo.py</h3>
+<h3>mongo.py:</h3>
 <h4>O mongo vamos realizar a conexão com o banco de dados do mongodb, passando o nome do banco que no caso é <code>filmes</code> e a collection que é <code>recomendacoes</code></h4>
 <h4>Vou chamar a função <code>inicia_conexão()</code> e passar um usuário para pesquisa para verificar se a comunicação está funcionando.</h4>
 
@@ -156,7 +156,7 @@ print(res)
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/0c5e85d8-1cd6-4625-b168-59bfe9671912" alt="img9">
 </p>
 
-<h3>main.py</h3>
+<h3>main.py:</h3>
 <h4>É responsável por conectar com o FastAPI e fazer as consultas. Irei criar uma função GET para realizar a mesma consulta pelo ID, porém dessa vez através da interface web.</h4>
 <h4>Vamos iniciar o servidor executando o código e acessar pelo link <a href="http://localhost:8001/docs/">http://localhost:8001/docs/</a>.</h4>
 
@@ -179,7 +179,7 @@ if __name__ == "__main__":
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/c2a332b0-14e9-4857-b984-28d7c88c36cc" alt="img10">
 </p>
-<h3>Apos acessar</h3>
+<h3>Apos acessar:</h3>
 <h4>São informados os requests criados. No caso, tenho apenas um que irá retornar o usuário, além dos arrays de filmes recomendados e notas. Que no caso tem o nome de <code>/rec/v2/{usuario}</code></h4>
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/913a2123-8e9a-4c37-90ee-71dcbda7febc" alt="img11">
@@ -191,7 +191,7 @@ if __name__ == "__main__":
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/6d47f447-1fdb-4722-907f-7e8f481e637d" alt="img13">
 </p>
-<h3>Retorno da consulta</h3>
+<h3>Retorno da consulta:</h3>
 <h4>No caso, são retornados os IDs dos filmes recomendados ao usuário e a nota prevista que ele irá avaliar para aquele filme.</h4>
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/1a29f1cc-b5be-41ca-b30a-51ebf8fd5f3f" alt="img14">
