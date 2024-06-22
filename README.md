@@ -91,10 +91,10 @@ print("Root-mean-square error = " + str(rmse))
 </p>
 
 <h3>Mostrando o userId, os filmes recomendados e a previsão da nota</h3>
+<h4>Mostrando apenas um dos ID para Analise</h4>
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/0a1a6566-15d3-4011-beb9-8b6e7b962add" alt="img6">
 </p>
-<h4>Mostrando apenas um dos ID para Analise</h4>
 
 ```python
 userRecs = model.recommendForAllUsers(10)
