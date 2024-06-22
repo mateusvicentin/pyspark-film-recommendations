@@ -10,7 +10,7 @@
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/947d111e-d697-4981-9850-4e1964266133" alt="img1">
 </p>
 
-<h1>PySpark</h1>
+<h1 align="center">PySpark</h1>
 
 <h2>Iniciando com o PySpark</h2>
 <p align="center">
@@ -100,7 +100,7 @@ print("Root-mean-square error = " + str(rmse))
 userRecs = model.recommendForAllUsers(10)
 userRecs.show(1, truncate=False)
 ```
-<h1>MongoDB</h1>
+<h1 align="center">MongoDB</h1>
 <h2>Salvando os dados no MongoDB</h2>
 <h4>Vamos salvar o userID e dois arrays de filmes e notas.</h4>
 
@@ -121,7 +121,7 @@ userRecs["recommendations"]["rating"].cast('array<double>').alias("rating")).\
   <img src="https://github.com/mateusvicentin/pyspark-film-recommendations/assets/31457038/edd45f7a-9f19-4e1e-ad21-2f8784304f34" alt="img8">
 </p>
 
-<h1>FastAPI</h1>
+<h1 align="center">FastAPI</h1>
 <h2>Utilizando o FastAPI</h2>
 <h4>Vamos utilizar 2 scripts em Python, um chamado <code>mongo</code> e outro chamado <code>main</code>, além do arquivo <code>requirements.txt</code> que contém as bibliotecas usadas no Python.</h4>
 
