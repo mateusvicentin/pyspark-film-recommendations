@@ -6,8 +6,12 @@
 
 # Índice 
 * [PySpark](#PySpark)
+* * [Iniciando com o PySpark](#Iniciando-com-o-PySpark)
+* * [Salvando os dados no MongoDB](#Salvando-os-dados-no-MongoDB)
 * [MongoDB](#MongoDB)
 * [FastAPI](#FastAPI)
+
+
   
 <p>
   Para o desenvolvimento do projeto, foram instanciados dois clusters no Docker para o funcionamento do sistema: um cluster contendo o servidor do Spark e outro cluster contendo o servidor do banco MongoDB.
